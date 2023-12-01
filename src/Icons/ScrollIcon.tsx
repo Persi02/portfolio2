@@ -1,5 +1,3 @@
-import React from 'react'
-
 function ScrollIconDown() {
     return (
         <svg className='btn-scroll1' width="51" height="51" viewBox="0 0 51 51" fill="none" xmlns="http://www.w3.org/2000/svg">

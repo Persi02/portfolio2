@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import Header from '../../components/General/Header/Header';
 import './style.scss'
 import LogoIcons from '../../Icons/LogoIcons';
