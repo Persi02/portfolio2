@@ -1,0 +1,36 @@
+.grid {
+    @apply w-full h-screen;
+    z-index: 3;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    position: absolute;
+    pointer-events: none;
+
+
+
+    .grid-one,
+    .grid-two,
+    .grid-three,
+    .grid-four {
+        border-bottom: 0.1px solid #686868;
+        background: #686868;
+
+    }
+
+
+    .grid-one,
+    .grid-two,
+    .grid-three,
+    .grid-five,
+    .grid-six,
+    .grid-seven {
+        border-right: 0.1px solid #686868;
+        background: #686868;
+    }
+
+    .grid-eight {
+        background: #686868;
+    }
+}

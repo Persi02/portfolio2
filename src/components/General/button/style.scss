@@ -1,0 +1,41 @@
+.btn {
+    display: inline-flex;
+    border-radius: 50px;
+    align-items: center;
+}
+
+.btn-lg {
+    padding: 8px 12px;
+    background: var(--secondary);
+    color: #FFF;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold
+}
+
+.btn-w {
+    @apply px-4;
+}
+
+.btn-xl {
+    @apply py-2 px-7;
+    background: var(--secondary);
+    color: #FFF;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold
+}
+
+@screen md {
+    .btn-w {
+        padding: 8px 12px;
+    }
+}
+
+@screen 2xl {
+
+    .btn-lg {
+        padding: 12px;
+        font-size: 20px;
+    }
+}

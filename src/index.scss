@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: rgba(0, 0, 0, .05);
+  --secondary: #000;
+  --blue: #37D0F0;
+  --blue-second: #000000;
+
+}
+
+body {
+  overflow-x: hidden;
+  cursor: none;
+  scroll-behavior: smooth;
+  width: 100%;
+}
+
+.wrap {
+  padding: 0 16px;
+}
+
+.h1 {
+  @apply flex text-black flex-col;
+  gap: 10px;
+  font-family: 'Poller One', sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: normal;
+  width: 1102px;
+}
+
+h2 {
+  font-family: 'Poller One',
+    sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #FFF;
+  text-align: center;
+}
+
+.first-h3 {
+  @apply text-black mb-3;
+  font-family: 'Poller One', sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.second-h3 {
+  @apply text-black mb-3;
+  font-size: 24px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold
+}
+
+.body_text {
+  font-size: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: var(--secondary)
+}
+
+.body_textgm {
+  @apply text-black;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.hero,
+.body_about,
+.body_skills,
+.body_contact {
+  background: white;
+}
+
+@screen sm {
+  .wrap {
+    padding: 0 30px;
+  }
+
+  .h1 {
+    font-size: 80px;
+    width: 660px;
+  }
+
+  h2 {
+    font-size: 60px;
+  }
+}
+
+@screen md {
+  .body_text {
+    font-size: 16px;
+  }
+}
+
+@screen lg {
+  .wrap {
+    padding: 0 50px;
+  }
+
+  h2 {
+    font-size: 80px;
+  }
+
+}
+
+@screen 2xl {
+
+  .wrap {
+    padding: 0 60px;
+  }
+
+  .h1 {
+    gap: 0px;
+    font-size: 128px;
+    line-height: normal;
+    width: 1102px;
+  }
+
+  h2 {
+    font-size: 160px;
+    font-style: normal;
+    line-height: normal;
+  }
+
+  .second-h3 {
+    @apply mb-8;
+
+  }
+
+  .first-h3 {
+    @apply mb-8;
+    font-size: 36px;
+  }
+
+  .body_textgm {
+    font-family: 'Poller One', sans-serif;
+    font-weight: 400;
+    font-size: 24px;
+  }
+
+  .body_text {
+    font-size: 20px;
+
+  }
+
+
+}

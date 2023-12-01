@@ -1,0 +1,482 @@
+.cursor-dot {
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+}
+
+.cursor-outline {
+    display: none;
+    width: 7px;
+    height: 7px;
+    background-color: #FFF;
+
+}
+
+@screen sm {
+
+    .cursor-outline,
+    .cursor-dot {
+        display: block;
+    }
+}
+
+.cursor-dot,
+.cursor-outline {
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 1000;
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
+
+//hero
+
+.wrap_button-scroll {
+    @apply flex items-center flex-col fixed;
+    gap: 10px;
+    bottom: 3%;
+    right: 16px;
+    z-index: 100;
+    mix-blend-mode: difference;
+
+    .btn-scroll1 {
+        // background-color: red;
+    }
+
+    .btn-scroll2 {
+        display: none;
+    }
+
+
+
+    p {
+        font-size: 16px;
+        color: white;
+    }
+}
+
+.hero {
+    @apply w-full h-screen flex items-center justify-center relative;
+    overflow-x: hidden;
+
+    .work {
+        padding-top: 20px;
+    }
+
+    .wrap_btn-hero {
+        margin-top: 0.5%;
+        margin-left: 50%;
+        transform: translateX(-50%);
+
+        button {
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 10px;
+        }
+    }
+
+
+    h1 {
+        .developer {
+            text-align: center;
+        }
+
+        .front {
+            text-align: center;
+        }
+    }
+
+
+    .intro {
+        position: absolute;
+        top: 3%;
+        left: 0;
+        width: 100%;
+        @apply flex justify-between items-start;
+
+        &-name {
+            @apply flex flex-col;
+            max-width: 132px;
+        }
+    }
+}
+
+//ABOUT
+.body_about {
+    @apply w-full py-10 relative;
+
+    .first_about {
+        p {
+            text-align: justify;
+        }
+    }
+
+    .second_about {
+        @apply flex flex-col justify-center mt-10;
+
+
+        figure {
+            width: 110px;
+            height: 110px;
+            transform: scale(1.5);
+
+            img {
+                border-radius: 50%;
+            }
+        }
+
+        .info {
+            margin-top: 30px;
+        }
+
+        p {
+
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+    }
+}
+
+// Skills
+
+.body_skills {
+    @apply w-full py-10 relative;
+
+
+    .design {
+        margin-bottom: 20px;
+
+        img {
+            width: 80px;
+            height: 80px;
+        }
+    }
+
+    .wrap_skills {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+
+        img {
+            @apply w-full h-full object-cover;
+            border-radius: 50%;
+        }
+    }
+
+    .second_skills {
+        margin-top: 20px;
+
+        .work_developer {
+            @apply flex gap-5 flex-wrap;
+        }
+    }
+
+}
+
+// Contact 
+
+.body_contact {
+    @apply w-full relative py-10;
+
+    .wrap_sociaux {
+        @apply flex flex-col w-full;
+
+        div {
+            margin-bottom: 0;
+        }
+
+    }
+}
+
+.lieu {
+    @apply flex flex-col gap-3 mb-5;
+
+    .icon_lieu {
+        height: 33px;
+        width: 33px;
+    }
+
+    div {
+        @apply flex items-center gap-3;
+
+        p {
+            @apply text-black text-base;
+        }
+    }
+}
+
+.sociaux {
+    @apply flex flex-col gap-8;
+    padding-top: 20px;
+
+    h3 {
+        display: none
+    }
+
+    div {
+        @apply flex gap-4;
+
+        svg {
+            cursor: pointer;
+        }
+    }
+}
+
+.form_contact {
+    @apply flex flex-col gap-5;
+    width: 100%;
+
+
+
+    label {
+        @apply text-black
+    }
+
+    .css-l4u8b9-MuiInputBase-root-MuiInput-root::before,
+    .css-1rcvvn7-MuiInputBase-root-MuiInput-root:before {
+        border-bottom: 1px solid #000;
+    }
+
+    input,
+    textarea {
+        @apply text-black;
+    }
+
+    .wrap-button-form {
+        position: relative;
+    }
+
+    button {
+        margin-top: 20px;
+        position: absolute;
+        right: 0;
+    }
+}
+
+.hr {
+    @apply w-full mt-40;
+
+    hr {
+        border-top: solid 2px #000;
+    }
+
+    p {
+        @apply text-black;
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+
+@screen sm {
+    .hero {
+        .intro {
+            &-name {
+                max-width: 200px;
+            }
+        }
+    }
+}
+
+@screen md {
+    .hero {
+        h1 {
+            .developer {
+                text-align: start;
+            }
+
+            .front {
+                text-align: end;
+            }
+        }
+
+
+    }
+}
+
+@screen lg {
+    .wrap_button-scroll {
+        right: 50px;
+    }
+
+    .hero {
+        .wrap_btn-hero {
+            margin-top: 0;
+
+            button {
+                margin-bottom: 20px;
+            }
+        }
+
+
+        .intro {
+            &-name {
+                max-width: 230px;
+            }
+        }
+    }
+
+    .body_about {
+        @apply h-screen py-12;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+
+        .first_about {
+            padding-right: 50px;
+
+        }
+
+
+
+        .second_about {
+            @apply items-center mt-0;
+            gap: 70px;
+            margin-left: 50px;
+
+            figure {
+                width: 279px;
+                height: 279px;
+
+                img {
+                    border-radius: 50%;
+                }
+            }
+
+            p {
+                font-size: 16px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .body_skills {
+        @apply py-12;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        .design {
+            margin-bottom: 37px;
+        }
+
+        .wrap_skills {
+            width: 100px;
+            height: 100px;
+        }
+
+        .second_skills {
+            margin-top: 0px;
+            margin-left: 50px;
+        }
+
+    }
+
+    .body_contact {
+        @apply flex items-center justify-center;
+        padding: 20% 0;
+
+
+        .wrap_sociaux {
+            @apply absolute pt-12 flex-row items-start top-0 left-0 gap-0 justify-between;
+
+            div {
+                margin-bottom: 0;
+            }
+
+        }
+    }
+
+    .lieu {
+        @apply flex flex-col gap-3 mb-0;
+
+        div {
+            @apply flex items-center gap-3;
+
+            p {
+                @apply text-black text-base;
+            }
+        }
+    }
+
+    .sociaux {
+        @apply flex flex-col items-center gap-4 pt-0;
+
+        h3 {
+            display: block;
+        }
+
+        div {
+            @apply flex gap-4;
+
+            svg {
+                cursor: pointer;
+            }
+        }
+    }
+
+    .form_contact {
+        @apply flex flex-col gap-5 mb-0;
+        width: 510px;
+
+
+        label {
+            @apply text-black
+        }
+
+        .css-l4u8b9-MuiInputBase-root-MuiInput-root::before,
+        .css-1rcvvn7-MuiInputBase-root-MuiInput-root:before {
+            border-bottom: 1px solid #000
+        }
+
+
+        button {
+            position: inherit;
+            margin-left: 100%;
+            transform: translateX(-100%);
+        }
+    }
+
+    .hr {
+        @apply w-full absolute bottom-5 left-0;
+
+        hr {
+            border-top: solid 2px #000;
+        }
+
+        p {
+            @apply text-black;
+            margin-top: 20px;
+            text-align: center;
+        }
+    }
+}
+
+@screen 2xl {
+
+    .wrap_button-scroll {
+        bottom: 50px;
+        right: 60px;
+    }
+
+    .hero {
+        .wrap_btn-hero {
+            margin-top: 0;
+
+            button {
+                margin-bottom: 20px;
+            }
+        }
+
+        .intro {
+            &-name {
+                max-width: 313px;
+            }
+        }
+    }
+
+
+
+}
